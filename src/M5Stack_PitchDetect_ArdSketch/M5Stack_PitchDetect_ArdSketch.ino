@@ -1,17 +1,7 @@
 /*
-  Purpose:
-    - Sample audio from the built-in microphone of M5Stack Core2.
-    - Estimate pitch (single-note monophonic input) within MIDI note range 58..75.
-    - Send MIDI Note On/Off messages via M5 Unit MIDI or UART MIDI fallback.
-    - Display activity and estimated MIDI note on the screen.
-
-  Libraries required:
-    - M5Unified (https://github.com/m5stack/M5Unified)
-    - M5GFX (part of M5Unified / included)
-    - Arduino built-in I2S (for ADC sampling on ESP32)
-
-  Notes:
-    - Goertzel filter bank is used to detect pitches in the fixed MIDI range.
+ NOTE: Compilation failed here with error:
+ 'class m5::M5Unified' has no member named 'Units'.
+ Cause: The M5Unified library no longer provides the M5.Units API used for Unit MIDI access.
 */
 
 #include <M5Unified.h>
