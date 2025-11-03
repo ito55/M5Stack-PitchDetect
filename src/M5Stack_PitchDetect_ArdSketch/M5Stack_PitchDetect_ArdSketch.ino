@@ -1,6 +1,4 @@
 /*
-  M5Core2_PitchDetect.ino
-
   Purpose:
     - Sample audio from the built-in microphone of M5Stack Core2.
     - Estimate pitch (single-note monophonic input) within MIDI note range 58..75.
@@ -13,7 +11,6 @@
     - Arduino built-in I2S (for ADC sampling on ESP32)
 
   Notes:
-    - All comments are in English and source uses ASCII only.
     - Goertzel filter bank is used to detect pitches in the fixed MIDI range.
 */
 

@@ -1,4 +1,4 @@
-# M5Core2 MIDI Pitch Detector
+# M5Stack Audio Pitch Detector
 
 This project captures audio from the built-in microphone of M5Stack Core2, estimates the pitch (monophonic) and sends corresponding MIDI Note On/Off messages via the M5 Unit MIDI (or a MIDI UART fallback). The pitch detection operates only within MIDI note numbers 58..75; inputs outside this range are not expected.
 
@@ -13,14 +13,14 @@ Features
   - If pitch changes while sound continues, send Note Off for the previous note and Note On for the new note
 
 Repository contents
-- M5Core2_PitchDetect.ino — main Arduino sketch (example)
+- src\M5Stack_PitchDetect_ArdSketch\M5Stack_PitchDetect_ArdSketch.ino — main Arduino sketch (example)
 - README.md — this file (English)
 - README.ja.md — Japanese README
 
 Requirements
 - M5Stack Core2 (ESP32-based)
 - M5 Unit MIDI (preferred) or external MIDI connection using UART2 TX pin
-- Arduino IDE or PlatformIO with ESP32 toolchain
+- Arduino IDE
 - Libraries:
   - M5Unified (includes M5GFX) — https://github.com/m5stack/M5Unified
   - Arduino core for ESP32 (matching your board)
@@ -32,7 +32,7 @@ Notes about hardware and ADC
 Quick start (Arduino IDE)
 1. Install the ESP32 Arduino core and configure your board for M5Stack Core2.
 2. Install M5Unified library (follow its README).
-3. Open the sketch file `M5Core2_PitchDetect.ino`.
+3. Open the sketch file `M5Stack_PitchDetect_ArdSketch.ino`.
 4. Select the correct board and COM port.
 5. Build and upload to your M5Core2.
 6. Connect M5 Unit MIDI or wire TX (GPIO17) to your MIDI device input (through proper MIDI DIN interface and isolation).

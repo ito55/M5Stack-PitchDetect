@@ -1,4 +1,4 @@
-# M5Core2 MIDI ピッチ検出器
+# M5Stack Audio Pitch Detector
 
 このプロジェクトは、M5Stack Core2 の内蔵マイクから音声を取得し、単音（モノフォニック）の音高を推定して、対応する MIDI Note On / Note Off メッセージを送信します。想定する MIDI ノート範囲は 58〜75 です。それ以外の音は想定していません。
 
@@ -13,14 +13,14 @@
   - 音が継続している間に音高が変化した場合は、前のノートを Note Off、次のノートで Note On
 
 リポジトリ構成
-- M5Core2_PitchDetect.ino — メインの Arduino スケッチ（サンプル）
+- src\M5Stack_PitchDetect_ArdSketch\M5Stack_PitchDetect_ArdSketch.ino — メインの Arduino スケッチ（サンプル）
 - README.md — 英語の README（本ファイルと対）
 - README.ja.md — 日本語 README（このファイル）
 
 必要なもの
 - M5Stack Core2（ESP32 ベース）
 - M5 Unit MIDI（推奨）または外部 MIDI 接続（UART2 経由）
-- Arduino IDE または PlatformIO（ESP32 ツールチェーン）
+- Arduino IDE
 - ライブラリ:
   - M5Unified（M5GFX を含む） — https://github.com/m5stack/M5Unified
   - ESP32 用 Arduino コア
@@ -32,7 +32,7 @@
 クイックスタート（Arduino IDE）
 1. ESP32 Arduino core をインストールし、ボードを M5Stack Core2 に設定します。
 2. M5Unified ライブラリをインストールします。
-3. `M5Core2_PitchDetect.ino` を開きます。
+3. `M5Stack_PitchDetect_ArdSketch.ino` を開きます。
 4. 適切なボードとポートを選択します。
 5. ビルドし、M5Core2 にアップロードします。
 6. M5 Unit MIDI を接続するか、TX（GPIO17）を MIDI 入力へ（適切な MIDI DIN インターフェースとアイソレーションを介して）接続します。
